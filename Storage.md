@@ -15,6 +15,35 @@ contract SimpleStorage {
 }
 ```
 
+# Code with Comment
+```cpp
+// SPDX-License-Identifier: GPL-3.0
+// have to write for Machine can Read
+/* 
+Storage Example :: 2024 - 02 - 23 /  -- 1 
+A 'contract' in the sense of Solidity is a "collection of code" (its functions) 
+and data (its state) that "resides at a specific address on the Ethereum blockchain"
+*/
+
+pragma solidity >=0.4.16 <0.9.0;
+// Pragmas are common instructions for compilers about how to treat the source code
+contract SimpleStorage {
+    uint storedData; 
+    // unit - > unsigned integer of 256 bits
+    // you can query and alter by calling functions of the code that manages the database
+
+    function set(uint x) public {
+        storedData = x;
+    }
+
+    function get() public view returns (uint) {
+        return storedData;
+    }
+}
+```
+
+
+
 ## 1. Member에 엑세스 하는 방법이 다르다. ( 의존성 주입이 this를 하지 않고 이름 그자체로 이뤄진다! )
 - To access a member (like a state variable) of the current contract, you do not typically add the `this.` prefix, you just access it directly via its name.
 	- -> 이름 자체에 주입해버리네~ 
