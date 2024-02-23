@@ -1,2 +1,2 @@
 # SolidityLang
-Solidity example for SmartContract from [solidity](docs.soliditylang.org)
+Solidity example for SmartContract from [dosc.solidity](docs.soliditylang.org)
