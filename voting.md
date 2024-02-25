@@ -1,3 +1,33 @@
+# Voting
+
+Eletronic voting 의 main problem
+1. how to assign voting rights to the correct persons.
+2. how to prevent mainpulation.
+
+# Voting 방법 
+
+1. 투표용 계약을 하나 씩 생성한다. ( 각 옵션마다 이름을 제공하면)
+2. 계약의 생성자인 **chairperson이 각 주소에** 개별적으로 **투표권을 부여한다.**
+3. 투표를 하거나, 투표를 위임하거나 둘 중 하나를 행한다.
+4. 투표 시간 끝나면 winngingProposal() 함수는 가장 많은 표를 얻은 제안을 반환한다. 
+
+## Possible Improvements
+
+1. 트랜잭션이 사람 한 명 마다 필요하니 많이 필요할 것이다. 
+2. 동점이면 어떻게 처리할 것인가
+
+## 투표의 장점
+1. 완전 투명하게 이뤄진다.
+2. 결과는 스마트 컨트랙트에 의해서 자동으로 처리된다.
+
+## 투표 활용
+
+1. [[DAO]](분산 자치 조직) 에서 이러한 투표 시스템을 사용하여 커뮤니티 구성원들이 중요한 결정을 내리는데 사용될 수 있다.
+
+
+## Code 
+-> voting folder 
+```cpp
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
 /// @title Voting with delegation.
@@ -159,3 +189,5 @@ contract Ballot {
         winnerName_ = proposals[winningProposal()].name;
     }
 }
+```
+``
