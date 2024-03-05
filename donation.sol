@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 <0.9.0;
+
 Contract Fundrasing {  // all the wallet of the owner
 	unit256 public targetAmount;
 	address public owner // adress는 string이 아니라 이더리움 adrress 형식이다.
